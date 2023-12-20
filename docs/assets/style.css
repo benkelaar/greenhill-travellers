@@ -12,10 +12,6 @@ video[poster] {
   object-fit: cover;
 }
 
-#reel-reel {
-  opacity: 0.7;
-}
-
 #band-name {
     position: absolute;
     top: 0;
