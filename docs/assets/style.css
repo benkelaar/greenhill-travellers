@@ -57,3 +57,8 @@ section:nth-of-type(even) {
     margin-left: 4vw;
     transform: scaleX(-1);
 }
+
+#socials img {
+    width: 30vw;
+    margin: 1vw;
+}
