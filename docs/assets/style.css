@@ -48,13 +48,13 @@ section:nth-of-type(even) {
 #story {
     font-size: calc(1vh + 2vw);
     font-weight: 300;
-    padding-left: 2vw;
+    padding: 2vw;
     text-align: justify;
+    gap: 2vw;
 }
 
 #story img {
     width: 40vw;
-    margin-left: 4vw;
     transform: scaleX(-1);
 }
 
@@ -63,7 +63,17 @@ section:nth-of-type(even) {
     margin: calc((1vw + 1vh)/2);
 }
 
-@media (max-aspect-ratio: 2/3) {
+@media (max-aspect-ratio: 4/5) {
+    #story {
+        flex-direction: column-reverse;
+        width: auto;
+    }
+
+    #story img {
+        width: 90vw;
+        transform: none;
+    }
+
     #socials {
         flex-direction: column;
     }
