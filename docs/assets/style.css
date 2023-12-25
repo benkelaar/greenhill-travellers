@@ -60,5 +60,17 @@ section:nth-of-type(even) {
 
 #socials img {
     width: 30vw;
-    margin: 1vw;
+    margin: calc((1vw + 1vh)/2);
+}
+
+@media (max-aspect-ratio: 2/3) {
+    #socials {
+        flex-direction: column;
+    }
+
+    #socials img {
+        width: auto;
+        max-width: 80vw;
+        max-height: 30vh;
+    }
 }
