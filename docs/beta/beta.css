@@ -1,0 +1,24 @@
+nav {
+    position: absolute;
+    width: 90vw;
+    height: 40px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+    gap: 10vw;
+    padding: 0 5vw;
+    font-family: sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: green;
+    width: inherit;
+    text-align: center;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgba(0, 128, 0, 0.5);
+}

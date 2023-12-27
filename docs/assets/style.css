@@ -19,11 +19,13 @@ main::-webkit-scrollbar {
     display: none;
 }
 
-section {
+section, nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+section {
     scroll-snap-align: start;
     position: relative;
     z-index: 1;
