@@ -75,6 +75,8 @@ section:nth-of-type(even) {
     padding: 2vw;
     text-align: justify;
     gap: 2vw;
+    height: calc(100vh - 4vw);
+    width: 96vw;
 }
 
 #story img {
