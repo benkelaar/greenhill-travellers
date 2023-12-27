@@ -11,6 +11,7 @@ main {
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    scroll-behavior: smooth;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -43,6 +44,26 @@ section:nth-of-type(even) {
 
 #band-name {
     width: 60%;
+}
+
+#title {
+    flex-direction: column;
+    gap: 10vh
+}
+
+/* This should just be an SVG */
+#arrow {
+    height: 5vw;
+    width: 5vw;
+    border-bottom: solid white 1px;
+    border-left: solid white 1px;
+    transform: rotate(-45deg);
+    opacity: 40%;
+}
+
+#arrow:hover {
+    border-width: 4px;
+    cursor: pointer;
 }
 
 #story {
