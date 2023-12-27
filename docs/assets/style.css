@@ -66,9 +66,12 @@ section:nth-of-type(even) {
     cursor: pointer;
 }
 
-#story {
+.body-text {
     font-size: calc(1vh + 2vw);
     font-weight: 300;
+}
+
+#story {
     padding: 2vw;
     text-align: justify;
     gap: 2vw;
