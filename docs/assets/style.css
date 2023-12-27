@@ -36,6 +36,20 @@ section:nth-of-type(even) {
     background-color: green;
 }
 
+td {
+    text-align: right;
+}
+
+.body-text {
+    font-size: calc(1vh + 2vw);
+    font-weight: 300;
+}
+
+.vertical {
+    flex-direction: column;
+    gap: 10vh
+}
+
 #background-reel[poster] {
     object-fit: cover;
     z-index: 0;
@@ -44,11 +58,6 @@ section:nth-of-type(even) {
 
 #band-name {
     width: 60%;
-}
-
-#title {
-    flex-direction: column;
-    gap: 10vh
 }
 
 /* This should just be an SVG */
@@ -63,12 +72,6 @@ section:nth-of-type(even) {
 
 #arrow:hover {
     border-width: 4px;
-    cursor: pointer;
-}
-
-.body-text {
-    font-size: calc(1vh + 2vw);
-    font-weight: 300;
 }
 
 #story {
@@ -87,6 +90,12 @@ section:nth-of-type(even) {
 #socials img {
     width: 30vw;
     margin: calc((1vw + 1vh)/2);
+}
+
+#contact-payoff {
+    filter: drop-shadow(4000px 0px 0 white);
+    transform: translateX(-4000px);
+    width: 40vw;
 }
 
 @media (max-aspect-ratio: 4/5) {
