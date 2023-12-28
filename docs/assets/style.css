@@ -19,7 +19,7 @@ main::-webkit-scrollbar {
     display: none;
 }
 
-section, nav {
+section, nav, nav a {
     display: flex;
     justify-content: center;
     align-items: center;

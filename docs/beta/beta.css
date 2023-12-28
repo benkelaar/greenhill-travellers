@@ -6,7 +6,7 @@ nav {
     left: 0;
     z-index: 2;
     background-color: white;
-    gap: 10vw;
+    gap: 1vw;
     padding: 0 5vw;
     font-family: sans-serif;
 }
@@ -14,9 +14,9 @@ nav {
 nav a {
     text-decoration: none;
     color: green;
-    width: inherit;
-    text-align: center;
-    border-radius: 5px;
+    width: 10vw;
+    min-width: 100px;
+    height: 40px;
 }
 
 nav a:hover {
