@@ -12,17 +12,15 @@
     <title>Greenhill Travellers | Beta folk for everyone</title>
   </head>
   <body>
-
-  <nav>
-    <a href="#story">The band</a>
-    <a href="#socials">Our socials</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <main>
     <video id="background-reel" autoplay loop muted preload="auto" poster="../assets/greenhill-travellers-band.jpeg">
       <source src="../assets/greenhill-travellers-promo-2024-site-background.mp4" type="video/mp4" />
     </video>
+    <nav>
+      <a href="#story">The band</a>
+      <a href="#socials">Our socials</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
     <section id="title" class="vertical">
       <img id="band-name" src="../assets/band-title-white.svg" alt="Greenhill Travellers">
@@ -74,4 +72,29 @@
     </section>
   </main>
   </body>
+
+  <script lang="javascript">
+    const debounce = (fn) => {
+      let frame;
+
+      return (...params) => {
+        if (frame) {
+          cancelAnimationFrame(frame);
+        }
+
+        frame = requestAnimationFrame(() => {
+          fn(...params);
+        });
+      };
+    };
+
+    const storeScroll = () => {
+      const scrollTop = document.getElementsByTagName("main")[0].scrollTop;
+      document.documentElement.dataset.scroll = "" + (scrollTop ? scrollTop > (window.innerHeight / 2) : 0);
+    };
+
+    document.addEventListener('mousewheel', debounce(storeScroll));
+
+    storeScroll();
+  </script>
 </html>
