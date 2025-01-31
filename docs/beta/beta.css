@@ -13,7 +13,7 @@ nav {
     opacity: 1;
 }
 
-html[data-scroll="0"] nav:not(:hover) {
+html[data-scroll="false"] nav:not(:hover) {
     opacity: 0;
 }
 
@@ -27,4 +27,19 @@ nav a {
 
 nav a:hover {
     background-color: rgba(0, 128, 0, 0.5);
+}
+
+#gigs table, caption {
+    text-align: left;
+    width: 100%;
+    margin: 5em;
+}
+
+#gigs caption {
+    margin-bottom: .5em
+}
+
+#gigs td {
+    text-align: left;
+    font-weight: 300;
 }

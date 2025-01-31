@@ -17,9 +17,11 @@
       <source src="../assets/greenhill-travellers-promo-2024-site-background.mp4" type="video/mp4" />
     </video>
     <nav>
-      <a href="#story">The band</a>
-      <a href="#socials">Our socials</a>
-      <a href="#contact">Contact</a>
+      <a href="#story" onclick="storeScroll(true)">The band</a>
+      <a href="#members" onclick="storeScroll(true)">Members</a>
+      <a href="#gigs" onclick="storeScroll(true)">Upcoming gigs</a>
+      <a href="#socials" onclick="storeScroll(true)">Our socials</a>
+      <a href="#contact" onclick="storeScroll(true)">Contact</a>
     </nav>
 
     <section id="title" class="vertical">
@@ -34,6 +36,36 @@
       Vele jaren podiumervaring garanderen dat ze van elk optreden een groot feest maken, voor jong en oud.
       De Travellers spelen met veel succes op festivals en in zalen in binnen- en buitenland, waaronder het fameuze 'Flight of the Cuckoo' folk festival in Ierland.
       <img id="band-shot" src="../assets/band-fun.jpg" alt="Greenhill Traveller outdoor fun">
+    </section>
+
+    <section id="members">
+      Some introduction for our band members
+    </section>
+
+    <section id="gigs">
+      <table>
+        <caption>Gigs coming up in 2025</caption>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Time</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Sunday, 2nd of February</td>
+          <td>Hermannus Alconiusstraat 2A</td>
+          <td>12:00, 13:30, 15:00</td>
+          <td>Utrecht</td>
+        </tr>
+        <tr>
+          <td>Friday, 7th of February</td>
+          <td>Cafe de Herberg</td>
+          <td>20:00</td>
+          <td>Deventer</td>
+        </tr>
+      </table>
     </section>
 
     <section id="socials">
@@ -62,19 +94,15 @@
       </table>
       <img id="contact-payoff" src="../assets/band-title.svg" alt="Greenhill Travellers">
     </section>
-
-    <section id="gigs">
-      Here we'll list upcoming gigs
-    </section>
-
-    <section id="members">
-      Some introduction for our band members
-    </section>
   </main>
   </body>
 
   <script lang="javascript">
-    const debounce = (fn) => {
+    function storeScroll(isScrolled) {
+      document.documentElement.dataset.scroll = "" + isScrolled
+    }
+
+    function debounce(fn) {
       let frame;
 
       return (...params) => {
@@ -86,14 +114,14 @@
           fn(...params);
         });
       };
-    };
+    }
 
-    const storeScroll = () => {
+    function updateScroll() {
       const scrollTop = document.getElementsByTagName("main")[0].scrollTop;
-      document.documentElement.dataset.scroll = "" + (scrollTop ? scrollTop > (window.innerHeight / 2) : 0);
-    };
+      storeScroll(scrollTop ? scrollTop > (window.innerHeight / 2) : false);
+    }
 
-    document.addEventListener('mousewheel', debounce(storeScroll));
+    document.addEventListener('mousewheel', debounce(updateScroll));
 
     storeScroll();
   </script>
