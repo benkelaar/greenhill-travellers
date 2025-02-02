@@ -38,8 +38,35 @@ section:nth-of-type(even) {
     background-color: green;
 }
 
-td {
-    text-align: right;
+nav {
+    position: absolute;
+    width: 90vw;
+    height: 40px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #19205c;
+    gap: 1vw;
+    padding: 0 5vw;
+    font-family: sans-serif;
+    transition: .2s;
+    opacity: 1;
+}
+
+html[data-scroll="false"] nav:not(:hover) {
+    opacity: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    width: 10vw;
+    min-width: 100px;
+    height: 40px;
+}
+
+nav a:hover {
+    background-color: rgba(0, 128, 0, 0.5);
 }
 
 .body-text {
@@ -92,6 +119,10 @@ td {
 #socials img {
     width: 30vw;
     margin: calc((1vw + 1vh)/2);
+}
+
+#contact td {
+    text-align: right;
 }
 
 #contact-payoff {

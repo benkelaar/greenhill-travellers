@@ -16,6 +16,12 @@
     <source src="assets/greenhill-travellers-promo-2024-site-background.mp4" type="video/mp4" />
   </video>
 
+  <nav>
+    <a href="#story">The band</a>
+    <a href="#socials">Our socials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <section id="title" class="vertical">
     <img id="band-name" src="assets/band-title-white.svg" alt="Greenhill Travellers">
     <a id="arrow" href="#story"></a>
@@ -58,4 +64,33 @@
   </section>
 </main>
 </body>
+<script lang="javascript">
+  function storeScroll(isScrolled) {
+    document.documentElement.dataset.scroll = "" + isScrolled
+  }
+
+  function debounce(fn) {
+    let frame;
+
+    return (...params) => {
+      if (frame) {
+        cancelAnimationFrame(frame);
+      }
+
+      frame = requestAnimationFrame(() => {
+        fn(...params);
+      });
+    };
+  }
+
+  function updateScroll() {
+    const scrollTop = document.getElementsByTagName("main")[0].scrollTop;
+    storeScroll(scrollTop ? scrollTop > (window.innerHeight / 2) : false);
+  }
+
+  const menuLinks = [...document.getElementsByTagName("nav")[0].getElementsByTagName("a")];
+  menuLinks.forEach(element => element.setAttribute("onclick", "storeScroll(true)"))
+  document.addEventListener('mousewheel', debounce(updateScroll));
+  updateScroll();
+</script>
 </html>

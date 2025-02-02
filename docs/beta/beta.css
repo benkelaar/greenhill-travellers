@@ -1,34 +1,3 @@
-nav {
-    position: absolute;
-    width: 90vw;
-    height: 40px;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background-color: #19205c;
-    gap: 1vw;
-    padding: 0 5vw;
-    font-family: sans-serif;
-    transition: .2s;
-    opacity: 1;
-}
-
-html[data-scroll="false"] nav:not(:hover) {
-    opacity: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    width: 10vw;
-    min-width: 100px;
-    height: 40px;
-}
-
-nav a:hover {
-    background-color: rgba(0, 128, 0, 0.5);
-}
-
 #gigs table, caption {
     text-align: left;
     width: 100%;
@@ -44,7 +13,6 @@ nav a:hover {
 }
 
 #gigs td {
-    text-align: left;
     font-weight: 300;
 }
 
