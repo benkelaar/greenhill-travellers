@@ -39,7 +39,15 @@ nav a:hover {
     margin-bottom: .5em
 }
 
+#gigs td, #gigs th {
+    border-bottom: 1px solid #ffffff90
+}
+
 #gigs td {
     text-align: left;
     font-weight: 300;
+}
+
+#gigs td.mobile-date {
+    display: none;
 }

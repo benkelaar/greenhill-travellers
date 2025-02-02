@@ -17,11 +17,11 @@
       <source src="../assets/greenhill-travellers-promo-2024-site-background.mp4" type="video/mp4" />
     </video>
     <nav>
-      <a href="#story" onclick="storeScroll(true)">The band</a>
-      <a href="#members" onclick="storeScroll(true)">Members</a>
-      <a href="#gigs" onclick="storeScroll(true)">Upcoming gigs</a>
-      <a href="#socials" onclick="storeScroll(true)">Our socials</a>
-      <a href="#contact" onclick="storeScroll(true)">Contact</a>
+      <a href="#story">The band</a>
+      <a href="#members">Members</a>
+      <a href="#gigs">Upcoming gigs</a>
+      <a href="#socials">Our socials</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <section id="title" class="vertical">
@@ -53,18 +53,57 @@
             <th>City</th>
           </tr>
         </thead>
-        <tr>
-          <td>Sunday, 2nd of February</td>
-          <td>Hermannus Alconiusstraat 2A</td>
-          <td>12:00, 13:30, 15:00</td>
-          <td>Utrecht</td>
-        </tr>
-        <tr>
-          <td>Friday, 7th of February</td>
-          <td>Cafe de Herberg</td>
-          <td>20:00</td>
-          <td>Deventer</td>
-        </tr>
+        <tbody>
+          <tr>
+            <td class="long-date">Sunday, 2nd of February</td>
+            <td class="mobile-date">02/02</td>
+            <td>Hermannus Alconiusstraat 2A</td>
+            <td>12:00, 13:30, 15:00</td>
+            <td>Utrecht</td>
+          </tr>
+          <tr>
+            <td class="long-date">Friday, 7th of February</td>
+            <td class="mobile-date">07/02</td>
+            <td>Cafe de Herberg</td>
+            <td>20:00</td>
+            <td>Deventer</td>
+          </tr>
+          <tr>
+            <td class="long-date">Sunday, 2nd of March</td>
+            <td class="mobile-date">02/03</td>
+            <td>Finnegan's</td>
+            <td>15:00</td>
+            <td>Apeldoorn</td>
+          </tr>
+          <tr>
+            <td class="long-date">Saturday, 15th of March</td>
+            <td class="mobile-date">15/03</td>
+            <td>Folk in 't Zandgat</td>
+            <td>20:00</td>
+            <td>Katwijk</td>
+          </tr>
+          <tr>
+            <td class="long-date">Sunday, 16th of March</td>
+            <td class="mobile-date">16/03</td>
+            <td>The Old Elk</td>
+            <td>15:00</td>
+            <td>Deventer</td>
+          </tr>
+          <tr>
+            <td class="long-date">Monday, 17th of March</td>
+            <td class="mobile-date">17/03</td>
+            <td>Aran Irish Pub</td>
+            <td>20:00</td>
+            <td>Amsterdam</td>
+          </tr>
+          <tr>
+            <td class="long-date">Sunday, 5th of April</td>
+            <td class="mobile-date">05/04</td>
+            <td>Private party</td>
+            <td>Undisclosed</td>
+            <td>Wageningen</td>
+          </tr>
+        </tbody>
       </table>
     </section>
 
@@ -121,8 +160,9 @@
       storeScroll(scrollTop ? scrollTop > (window.innerHeight / 2) : false);
     }
 
+    const menuLinks = [...document.getElementsByTagName("nav")[0].getElementsByTagName("a")];
+    menuLinks.forEach(element => element.setAttribute("onclick", "storeScroll(true)"))
     document.addEventListener('mousewheel', debounce(updateScroll));
-
     updateScroll();
   </script>
 </html>

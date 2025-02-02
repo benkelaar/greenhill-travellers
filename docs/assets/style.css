@@ -111,6 +111,18 @@ td {
         transform: none;
     }
 
+    #gigs {
+        font-size: 4vw;
+    }
+
+    #gigs td.long-date {
+        display: none !important;
+    }
+
+    #gigs td.mobile-date {
+        display: table-cell !important;
+    }
+
     #socials {
         flex-direction: column;
     }
